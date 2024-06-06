@@ -1,0 +1,143 @@
+/* index.css */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h3.task-title {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left;
+  }
+  
+  /* Form styles */
+  /* .create-task-block, .filter-task-block {
+    margin-bottom: 0px;
+  } */
+  
+  .create-task-form, .filter-task-block {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-field {
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .btn, .clear-tasks {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .btn:hover, .clear-tasks:hover {
+    background: #555;
+  }
+  
+  /* Fixed elements */
+  .create-task-block,
+  .filter-task-block {
+    position: fixed;
+    top: 0;
+    width: calc(50% - 40px); /* Adjust based on container width and padding */
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+  }
+  
+  /* Push the filter block below the create block */
+  .filter-task-block {
+    top: 160px; /* Adjust based on the height of .create-task-block */
+  }
+  
+  /* Adjust container padding for fixed elements */
+  .container {
+    padding-top: 220px; /* Adjust based on combined height of fixed blocks */
+  }
+  
+  /* Task list styles */
+  .filter-task-block {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+  }
+  
+  ul.collection {
+    list-style: none;
+    padding: 0;
+    flex-grow: 1;
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: 350px; /* Set a specific height for the list */
+
+  }
+  
+  li.collection-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background: #fff;
+  }
+  
+  li.collection-item .text-with-icon {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  li.collection-item .text-with-icon i {
+    margin-right: 10px;
+  }
+  
+  span.delete-item {
+    color: red;
+    cursor: pointer;
+  }
+  
+  span.delete-item:hover {
+    color: darkred;
+  }
+  
+  /* "DELETE ALL" button fixed */
+  .clear-tasks {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+}
+
+  
